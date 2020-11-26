@@ -58,6 +58,9 @@ Route::get('/showStudent', [App\Http\Controllers\myStudentController::class, 'sh
 
 Route::post('/insertStudent/store', [App\Http\Controllers\myStudentController::class, 'store'])->name('addStudent');
 
+Route::get('/editProduct/{id}', [App\Http\Controllers\ProductController::class, 'edit'])->name('editProduct');
+
+Route::post('/updateproduct', [App\Http\Controllers\ProductController::class, 'update'])->name('updateproduct');
 
 Auth::routes();
 

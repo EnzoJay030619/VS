@@ -20,7 +20,7 @@ class productController extends Controller
         $image=$r->file('product-image');
         $image->move('images',$image->getClientOriginalName());   //images is the location  
         $imageName=$image->getClientOriginalName(); 
-        $addCategory=product::create([    //step 3 bind data
+        $addCategory=Product::create([    //step 3 bind data
             'id'=>$r->ID, //add on 
             'name'=>$r->name, //fullname from HTML
             'description'=>$r->description,
@@ -45,5 +45,32 @@ class productController extends Controller
         $products->delete();
         return redirect()->route('showProduct');
     }
+    public function edit($id){
+       
+        $products =Product::all()->where('id',$id);
+        //select * from products where id='$id'
+        
+        return view('editproduct')->with('products',$products)
+                                ->with('categories',Category::all());
+    }
+    public function update(){
+        $r=request();//retrive submited form data
+        $products =Product::find($r->ID);  //get the record based on product ID      
+        if($r->file('product-image')!=''){
+            $image=$r->file('product-image');        
+            $image->move('images',$image->getClientOriginalName());                   
+            $imageName=$image->getClientOriginalName(); 
+            $products->image=$imageName;
+            }         
+        $products->name=$r->name;
+        $products->description=$r->description;
+        $products->price=$r->price;
+        $products->quantity=$r->quantity;
+        $products->categoryID=$r->category;
+        $products->save(); //run the SQL update statment
+        return redirect()->route('showProduct');
+    }
+
 }
+
 
