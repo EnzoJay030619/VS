@@ -35,6 +35,7 @@ Route::get('/contactus', function () {
 });
 
 
+Route::post('/searchproduct', [App\Http\Controllers\ProductController::class, 'search'])->name('search.product');
 
 Route::post('/insertCategory/store', [App\Http\Controllers\CategoryController::class, 'store'])->name('addCategory');
 
@@ -61,6 +62,10 @@ Route::post('/insertStudent/store', [App\Http\Controllers\myStudentController::c
 Route::get('/editProduct/{id}', [App\Http\Controllers\ProductController::class, 'edit'])->name('editProduct');
 
 Route::post('/updateproduct', [App\Http\Controllers\ProductController::class, 'update'])->name('updateproduct');
+
+Route::get('/editStudent/{id}', [App\Http\Controllers\myStudentController::class, 'edit'])->name('editStudent');
+
+Route::post('/updatestudent', [App\Http\Controllers\myStudentController::class, 'update'])->name('updatestudent');
 
 Auth::routes();
 

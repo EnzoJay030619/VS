@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class myStudent extends Model
 {
     use HasFactory;
-    protected $fillable=['name','studentID','age','department','gpa'];
+    protected $fillable=['studentid','name','email','address','phonenumber','image'];
     public function students(){
         return $this->belongsTo('App\Models\Category');
     }

@@ -5,27 +5,27 @@
                     <form class="subform"  method="post" action="{{ route('addStudent') }}" enctype="multipart/form-data">
                     @csrf <!-- very important if you didn't insert CSRF, it not allow submit the data-->
                     <p>
-                        <label for="id" class="label">Student ID</label>
-                        <input type="text" name="id" id="id">
+                        <label for="studentid" class="label">Student ID</label>
+                        <input type="text" name="studentid" id="studentid">
                     </p>
                     <p>
                         <label for="name" class="label">Name</label>
                         <input type="text" name="name" id="name">
                     </p>
                     <p>
-                        <label for="department" class="label">Department</label>
-                        <input type="text" name="department" id="department">
+                        <label for="email" class="label">E-Mail</label>
+                        <input type="text" name="email" id="email">
                     </p>
                     <p>
-                        <label for="age" class="label">Age</label>
-                        <input type="number" name="age" id="age">
+                        <label for="address" class="label">Address</label>
+                        <input type="text" name="address" id="address">
                     </p>
                     <p>
-                        <label for="gpa" class="label">GPA</label>
-                        <input type="text" name="gpa" id="gpa">
+                        <label for="phonenumber" class="label">Phone Number</label>
+                        <input type="number" name="phonenumber" id="phonenumber">
                     </p>
                     <p>
-                        <input type="file" class="form-control" name="product-image" value="">
+                        <input type="file" class="form-control" name="student-image" value="">
                     </p>
                     <p>
                         <input type="submit" name="insert" value="Insert">

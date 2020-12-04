@@ -13,9 +13,10 @@
 		        <tr class="thead-dark">
 		            <th>ID</th>
                     <th>Image</th>
-		            <th>Name</th>
-		            <th>Age</th>
-		            <th>GPA</th>
+					<th>Name</th>
+		            <th>Email</th>
+		            <th>Address</th>
+		            <th>Phone Number</th>
                     <th>Action</th>
 		        </tr>
 		    </thead>
@@ -27,13 +28,14 @@
 		                <td style="max-width:300px">
 		                    <h6>{{$myStudent->name}}</h6>
 		                    <em class="text-muted">	
-                            {{$myStudent->department}}	                       
+                            {{$myStudent->studentid}}	                       
 		                    </em>
 		                </td>
-                        <td>{{$myStudent->age}}</td>
-                        <td>{{$myStudent->gpa}}</td>
+                        <td>{{$myStudent->email}}</td>
+                        <td>{{$myStudent->address}}</td>
+						<td>{{$myStudent->phonenumber}}</td>
 		                <td>
-		                    <a href="#" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a> | 
+						<a href="{{route('editStudent0..', ['id' => $myStudent->id])}}" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a>|
 		                    <a href="{{ route('deleteStudent', ['id' => $myStudent->id]) }}"
  							 class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</a>
 		                </td>
