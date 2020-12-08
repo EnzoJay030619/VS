@@ -18,6 +18,7 @@
                 <img src="{{asset('images/artix.jpg')}}" alt="" class="w-80">
                 </div>
                 
+                
             </div>
             </div>
         </div>

@@ -45,20 +45,7 @@
                     </div>                    
                 </div>                        
 
-                <div class="row" style="margin-top:20px;">
-                    <div class="col-sm-4" style="text-align: center;">
-                        <img src="{{ asset('images/samsungPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
-                        <p>SAMSUNG</p>
-                    </div>
-                    <div class="col-sm-4" style="text-align: center">
-                        <img src="{{ asset('images/xiaomiPhone.jpg')}}" width=50% alt="" class="img-fluid"> 
-                        <p>XIAOMI</p>           
-                    </div>
-                    <div class="col-sm-4" style="text-align: center" >
-                        <img src="{{ asset('images/vivoPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
-                        <p>VIVO</p>
-                    </div>                
-                </div>
+                
                     
             </div>
 

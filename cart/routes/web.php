@@ -51,6 +51,8 @@ Route::post('/insertProduct/store', [App\Http\Controllers\ProductController::cla
 
 Route::get('/showProduct', [App\Http\Controllers\ProductController::class, 'show'])->name('showProduct');
 
+Route::get('/detail_Product', [App\Http\Controllers\ProductController::class, 'detail'])->name('detail_Product');
+
 Route::get('/insertProduct', [App\Http\Controllers\ProductController::class, 'create'])->name('insertProduct');
 
 Route::get('/insertStudent', [App\Http\Controllers\myStudentController::class, 'create'])->name('insertStudent');

@@ -40,6 +40,10 @@ class productController extends Controller
         $products=Product::paginate(3);
         return view('showProduct')->with('products',$products);
     }
+    public function detail(){
+        $products=Product::all();
+        return view('detailProduct')->with('products',$products);
+    }
     public function delete($id){
         $products=Product::find($id);
         $products->delete();
